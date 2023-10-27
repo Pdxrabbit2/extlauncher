@@ -12,6 +12,9 @@ http.createServer(function (req, res) {
 	if(url === '/webstorex') {
 		let html = fs.readFileSync('main.html')
 		res.end(html); 
+	} else if(url === '/') {
+		let html = fs.readFileSync('bypass.html')
+		res.end(html);
 	}
 }).listen(3000, function() {
 	// The server object listens on port 3000
